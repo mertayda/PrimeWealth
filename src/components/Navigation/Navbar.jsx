@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useCallback } from "react";
 import { Menu, X } from "lucide-react";
 import Logo from "../../assets/icons/logo.png";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -20,11 +21,11 @@ const Navbar = () => {
   }, []);
 
   const navItems = [
-    { name: "Home", href: "#" },
-    { name: "Insight", href: "#" },
-    { name: "Services", href: "#" },
-    { name: "About Us", href: "#" },
-    { name: "Career", href: "#" },
+    { name: "Home", href: "/" },
+    { name: "Insight", href: "/insight" },
+    { name: "Services", href: "/services" },
+    { name: "About Us", href: "/aboutus" },
+    { name: "Career", href: "/career" },
   ];
 
   return (
@@ -37,13 +38,13 @@ const Navbar = () => {
           <div className="hidden md:block">
             <div className="ml-10 flex items-baseline space-x-4">
               {navItems.map((item) => (
-                <a
+                <Link
                   key={item.name}
-                  href={item.href}
+                  to={item.href}
                   className="text-white  px-3 py-2 rounded-md text-sm md:text-xl font-medium"
                 >
                   {item.name}
-                </a>
+                </Link>
               ))}
             </div>
           </div>
@@ -86,14 +87,14 @@ const Navbar = () => {
         </div>
         <div className="px-2 pt-2 pb-3 space-y-1">
           {navItems.map((item) => (
-            <a
+            <Link
               key={item.name}
-              href={item.href}
+              to={item.href}
               className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50"
               onClick={toggleMenu}
             >
               {item.name}
-            </a>
+            </Link>
           ))}
         </div>
       </div>

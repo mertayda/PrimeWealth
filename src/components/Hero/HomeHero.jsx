@@ -27,7 +27,7 @@ const HomeHero = () => {
   return (
     <div className="relative w-full min-h-screen overflow-hidden font-playfair">
       <div className="absolute inset-0 bg-gradient-to-br from-blue-900 via-indigo-900 to-purple-900 z-0"></div>
-      <div className="absolute inset-0 bg-[url('/api/placeholder/1920/1080')] bg-cover bg-center mix-blend-overlay z-10"></div>
+
       <div className="absolute inset-0 bg-black bg-opacity-40 z-20"></div>
       <div className="relative z-30 flex flex-col min-h-screen">
         <Navbar />

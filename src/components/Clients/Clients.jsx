@@ -53,7 +53,7 @@ export default function Clients() {
         <Marquee pauseOnHover direction="right">
           {logos.map((logo, idx) => (
             <img
-              key={logo.name}
+              key={`${logo.name}-${idx}`}
               src={logo.src}
               alt={logo.name}
               width="100"
@@ -67,7 +67,7 @@ export default function Clients() {
         <Marquee pauseOnHover direction="left" speed={30}>
           {logos.map((logo, idx) => (
             <img
-              key={logo.name + "second"}
+              key={`${logo.name}-second-${idx}`}
               src={logo.src}
               alt={logo.name}
               width="100"

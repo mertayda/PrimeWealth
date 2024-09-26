@@ -4,8 +4,8 @@ import expert from "../../assets/images/expert.png";
 
 const AboutUs = () => {
   return (
-    <div className="w-full py-24 px-8 bg-gradient-to-b from-gray-50 to-white font-serif">
-      <div className="flex flex-col max-w-6xl mx-auto">
+    <div className="w-full py-24 px-8 bg-gradient-to-b from-gray-50 to-white font-playfair">
+      <div className="flex flex-col max-w-6xl mx-auto justify-center">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-20">
           <div className="space-y-8">
             <div className="relative inline-block">
@@ -35,7 +35,7 @@ const AboutUs = () => {
             </a>
           </div>
           <div className="relative group">
-            <div className="absolute -inset-2 bg-gradient-to-r from-[#FFD700] to-purple-600 rounded-lg blur opacity-75 group-hover:opacity-100 transition duration-1000 group-hover:duration-200 animate-tilt"></div>
+            <div className="absolute -inset-2 bg-gradient-to-r from-[#FFD700] to-purple-600 rounded-lg blur opacity-75 group-hover:opacity-100 transition duration-1000 group-hover:duration-200 animate-tilt "></div>
             <div className="relative w-full h-96 bg-gray-200 rounded-lg shadow-lg overflow-hidden">
               <img
                 src={expert}

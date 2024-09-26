@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import { motion, useInView } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import cfo from "../../assets/images/cfo.svg";
@@ -8,7 +8,7 @@ import consulting from "../../assets/images/consulting.svg";
 
 const ServiceCard = ({ icon, title, description, index }) => {
   const [isHovered, setIsHovered] = useState(false);
-  const cardRef = React.useRef(null);
+  const cardRef = useRef(null);
   const isInView = useInView(cardRef, { once: true, amount: 0.2 });
 
   return (
@@ -75,7 +75,7 @@ const OurServices = () => {
     },
   ];
 
-  const sectionRef = React.useRef(null);
+  const sectionRef = useRef(null);
   const isInView = useInView(sectionRef, { once: true, amount: 0.2 });
 
   return (

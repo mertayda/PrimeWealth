@@ -19,13 +19,20 @@ module.exports = {
   theme: {
     extend: {
       fontFamily:{
-        'playfair': ['Playfair Display', 'serif'],}
+        'playfair': ['Playfair Display', 'serif'],},
+        keyframes:{
+          "0%, 50% 100%": { transform: "rotate(0deg)" },
+          "25%": { transform: "rotate(1deg)" },
+          "75%": { transform: "rotate(-1deg)" },
+        }
     },
   },
   plugins: [
     flowbite.plugin()
   ],
- 
+  animation: {
+    tilt: "tilt 10s infinite linear",
+  }
 };
 
 // This plugin adds each Tailwind color as a global CSS variable, e.g. var(--gray-200).
